@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title=""></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ccdstyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+   $('button').on('click',function(){
+     $('#contactcard').append(
+       '<div class="contact">' +'<p class=name>'+'<span>Name: </span>'+ $('#fn').val()+" "+$('#ln').val()+'</p>'+'<p class="descr"> Click me for description</p>'
+        +'<p class = "show hidden">'+$('#des').val()+'</p>'+'</div>'
+     )
+      $("input").val("");
+      $("textarea").val("");
+    });
+    $('#contactcard').on('click','.contact',function(){
+      $(this).find(".show").toggleClass("hidden");
+      $(this).find(".descr,.name").toggle();
+
+    });
+
+    });
+  </script>
+</head>
+<body>
+<div id = 'userenter'>
+  <form id='contactform' action="" method='post'>
+      <fieldset>
+        <legend>Name Info</legend>
+      <div id="firstname">
+      <p>First Name:</p><input class='textinput' type='text' id ="fn" name='first_name'>
+      </div>
+      <div id="lastname">
+      <p>Last Name:</p><input class='textinput' type='text' id="ln" name='last_name'>
+      </div>
+      </fieldset>
+      <fieldset>
+        <legend>say something</legend>
+      <div id="dc">
+      <p>Description:</p><textarea cols="30" rows="30" type='text' id="des" name='description'> </textarea>
+      </div>
+      </fieldset>
+  </form>
+  <button type="submit" id = "adduserbt">Add User</button>
+</div>
+<div id = 'contactcard'>
+</div>
+</body>
+</html>

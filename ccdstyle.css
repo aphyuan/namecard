@@ -1,0 +1,52 @@
+.container{
+	width:980px;
+	margin:0 auto;
+ border: solid black;
+}
+
+.hidden{
+  display: none;
+}
+.show{
+
+}
+#userenter{
+width: 400px;
+display: inline-block;
+}
+#contactform{
+  margin-right: 40px;
+}
+#contactcard{
+  vertical-align: top;
+  display: inline-block;
+width: 400px;
+}
+.contact{
+  background-image: url(card.jpg);
+  padding: 15px;
+  border-radius: 2px;
+  display: inline-block;
+  color:rgba(198, 182, 134, 0.52);
+  height:150px;
+  margin: 30px;
+  width: 450px;
+  text-align: center;
+}
+#dc p{
+  vertical-align: top;
+}
+button{
+  margin-top: 20px;
+  background-color: rgba(8, 26, 70, 0.57);
+  padding: 20px;
+  color: rgb(121, 21, 45);
+  position: relative;
+  left: 50px;
+}
+.contact span{
+  font-family: monospace;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 20px;
+}
